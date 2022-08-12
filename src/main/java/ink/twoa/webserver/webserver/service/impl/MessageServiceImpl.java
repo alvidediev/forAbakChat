@@ -1,4 +1,4 @@
-package ink.twoa.webserver.webserver.service.imlp;
+package ink.twoa.webserver.webserver.service.impl;
 
 import ink.twoa.webserver.webserver.crud.MessageEntity;
 import ink.twoa.webserver.webserver.dao.impl.MessagesDaoInterfaceImpl;

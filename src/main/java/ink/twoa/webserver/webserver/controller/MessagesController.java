@@ -1,7 +1,7 @@
 package ink.twoa.webserver.webserver.controller;
 
 import ink.twoa.webserver.webserver.crud.MessageEntity;
-import ink.twoa.webserver.webserver.service.imlp.MessageServiceImpl;
+import ink.twoa.webserver.webserver.service.impl.MessageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
