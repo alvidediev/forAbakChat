@@ -8,18 +8,18 @@ BEGIN;
 drop table if exists users cascade;
 
 create table users(
-    id                  int             primary key              not null,
+    id                  serial             primary key           not null,
     firstname           varchar                                  not null,
     lastname            varchar                                  not null,
-    telephone_number    int                                      not null,
+    telephone_number    bigint                                   not null,
     email               varchar                                  not null
     );
 
 drop table if exists messages cascade;
 
 create table if not exists messages(
-    id                  int             primary key              not null,
-    message             text                                     not null,
+    id                  serial             primary key           not null,
+    message             varchar                                  not null,
     date_of_message     timestamp                                not null
     );
 

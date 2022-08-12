@@ -9,7 +9,7 @@ public class UsersEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Long userId;
 
     @Column(name = "firstname")
     private String firstName;
@@ -23,15 +23,12 @@ public class UsersEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "nick_name")
-    private String nickName;
-
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -66,35 +63,25 @@ public class UsersEntity {
         this.email = email;
     }
 
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
     public UsersEntity() {
     }
 
-    public UsersEntity(Long id, String firstName, String lastName, int telephoneNumber, String email, String nickName) {
-        this.id = id;
+    public UsersEntity(Long id, String firstName, String lastName, int telephoneNumber, String email) {
+        this.userId = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.telephoneNumber = telephoneNumber;
         this.email = email;
-        this.nickName = nickName;
     }
 
     @Override
     public String toString() {
         return "UsersEntity{" +
-                "id=" + id +
+                "id=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", telephoneNumber=" + telephoneNumber +
                 ", email='" + email + '\'' +
-                ", nickName='" + nickName + '\'' +
                 '}';
     }
 }
