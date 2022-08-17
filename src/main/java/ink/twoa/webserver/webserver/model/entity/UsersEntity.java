@@ -1,4 +1,4 @@
-package ink.twoa.webserver.webserver.crud;
+package ink.twoa.webserver.webserver.model.entity;
 
 import javax.persistence.*;
 

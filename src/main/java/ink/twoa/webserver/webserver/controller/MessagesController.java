@@ -1,11 +1,11 @@
 package ink.twoa.webserver.webserver.controller;
 
-import ink.twoa.webserver.webserver.crud.MessageEntity;
-import ink.twoa.webserver.webserver.service.impl.MessageServiceImpl;
+import ink.twoa.webserver.webserver.model.entity.MessageEntity;
+import ink.twoa.webserver.webserver.service.MessageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping
@@ -15,14 +15,13 @@ public class MessagesController {
     private MessageServiceImpl msgService;
 
     @GetMapping("/msg")
-    public List<MessageEntity> showAllMessages(){
-        List<MessageEntity> messages = msgService.showAllMessages();
-        return messages;
+    public Iterable<MessageEntity> showAllMessages(){
+        return msgService.getAllMessages();
     }
 
     @GetMapping("/msg/{id}")
-    public MessageEntity getMessage(@PathVariable Long id){
-        return msgService.getEntityMsg(id);
+    public Optional<MessageEntity> getMessageById(@PathVariable Long id){
+        return msgService.findMsgById(id);
     }
 
     @PostMapping("/msg")
