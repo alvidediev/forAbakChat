@@ -1,4 +1,4 @@
-package ink.twoa.webserver.webserver;
+package ink.twoa.webserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

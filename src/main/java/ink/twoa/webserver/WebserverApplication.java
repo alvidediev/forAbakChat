@@ -1,4 +1,4 @@
-package ink.twoa.webserver.webserver;
+package ink.twoa.webserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

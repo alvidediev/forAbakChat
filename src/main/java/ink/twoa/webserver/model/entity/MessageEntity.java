@@ -1,4 +1,4 @@
-package ink.twoa.webserver.webserver.model.entity;
+package ink.twoa.webserver.model.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 

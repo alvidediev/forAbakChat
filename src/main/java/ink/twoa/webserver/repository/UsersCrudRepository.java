@@ -1,6 +1,6 @@
-package ink.twoa.webserver.webserver.repository;
+package ink.twoa.webserver.repository;
 
-import ink.twoa.webserver.webserver.model.entity.UsersEntity;
+import ink.twoa.webserver.model.entity.UsersEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

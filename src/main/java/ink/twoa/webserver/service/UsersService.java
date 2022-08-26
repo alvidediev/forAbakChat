@@ -1,7 +1,7 @@
-package ink.twoa.webserver.webserver.service;
+package ink.twoa.webserver.service;
 
-import ink.twoa.webserver.webserver.model.entity.UsersEntity;
-import ink.twoa.webserver.webserver.repository.UsersCrudRepository;
+import ink.twoa.webserver.model.entity.UsersEntity;
+import ink.twoa.webserver.repository.UsersCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
-public class UsersServiceImpl {
+public class UsersService {
 
     @Autowired
     private UsersCrudRepository crud;
