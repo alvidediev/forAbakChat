@@ -3,6 +3,8 @@ package ink.twoa.webserver.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ink.twoa.webserver.model.entity.UsersEntity;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -11,16 +13,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
+@Data
 public class KafkaService {
 
     private final KafkaTemplate<Long, UsersEntity> kafkaTemplate;
     private final ObjectMapper objectMapper;
-
-    @Autowired
-    public KafkaService(KafkaTemplate<Long, UsersEntity> kafkaTemplate, ObjectMapper objectMapper) {
-        this.kafkaTemplate = kafkaTemplate;
-        this.objectMapper = objectMapper;
-    }
 
     public void send(UsersEntity users){
         kafkaTemplate.send("msg", users);

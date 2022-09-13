@@ -15,7 +15,6 @@ import static ink.twoa.webserver.util.Constants.*;
 @RequiredArgsConstructor
 public class MessagesController {
 
-    @Autowired
     private MessageService msgService;
 
     @GetMapping(value = SHOW_ALL_MESSAGES)

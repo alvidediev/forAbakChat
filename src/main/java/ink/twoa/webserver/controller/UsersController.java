@@ -2,6 +2,7 @@ package ink.twoa.webserver.controller;
 
 import ink.twoa.webserver.model.entity.UsersEntity;
 import ink.twoa.webserver.service.UsersService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +12,9 @@ import static ink.twoa.webserver.util.Constants.*;
 
 @RestController
 @RequestMapping
+@RequiredArgsConstructor
 public class UsersController {
 
-    @Autowired
     private UsersService usersService;
 
 
